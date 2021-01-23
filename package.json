@@ -1,0 +1,27 @@
+{
+  "name": "sulekha-pushtika",
+  "version": "1.0.0",
+  "description": "sulekha for ram, hanuman and others",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev3872/sulekha-pushtika.git"
+  },
+  "keywords": [
+    "sulekha-pushtika",
+    "ram",
+    "hanuman"
+  ],
+  "author": "dev3872",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev3872/sulekha-pushtika/issues"
+  },
+  "homepage": "https://github.com/dev3872/sulekha-pushtika#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
