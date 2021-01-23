@@ -1,0 +1,4 @@
+{
+  "jwtSecret": "secret",
+  "mongoURI": "mongodb+srv://dbUser:dbUser@cluster0.xufbb.mongodb.net/sulekh-pushtika?retryWrites=true&w=majority"
+}
