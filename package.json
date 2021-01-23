@@ -22,7 +22,11 @@
   },
   "homepage": "https://github.com/dev3872/sulekha-pushtika#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.3",
     "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.13"
   }
