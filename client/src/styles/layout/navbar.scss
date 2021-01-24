@@ -1,0 +1,68 @@
+@import "../../index.scss";
+
+@mixin navbar-span-svg($value1, $value2) {
+  background: $value1;
+  background-repeat: no-repeat;
+  @media (max-width: 600px) {
+    width: $screen-width * 2 / $value2;
+  }
+  @media (max-width: 2000px) {
+    width: $screen-width/$value2;
+  }
+  background-size: 80% 80%;
+  background-position: center;
+  height: inherit;
+  cursor: pointer;
+}
+
+.navbar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 8vh;
+  background: $secondary-color;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+}
+
+.navbar-logo {
+  @include navbar-span-svg(url("../../icons/logo.svg"), 20);
+}
+.navbar-brand {
+  @include navbar-span-svg(url("../../icons/brand-name.svg"), 10);
+}
+.navbar-user-account {
+  @include navbar-span-svg(url("../../icons/user-white.svg"), 20);
+  margin-left: auto;
+  z-index: 10;
+}
+.navbar-user-options {
+  position: absolute;
+  top: -39vh;
+  right: 0px;
+  margin: 0px 10px;
+  display: flex;
+  transition: all 250ms;
+  flex-direction: column;
+  z-index: 5;
+  .item {
+    @media (max-width: 2000px) {
+      width: $screen-width/10;
+    }
+    @media (max-width: 601px) {
+      width: $screen-width/1.05;
+    }
+    height: fit-content;
+    padding: 10px 0px 10px 5px;
+    margin: 1px;
+    background: $tertiary-color;
+    font: $font-family-hindi;
+    &:hover {
+      cursor: pointer;
+      background: $quarternary-color;
+    }
+  }
+}
