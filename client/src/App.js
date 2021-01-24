@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import { LOGOUT } from "./actions/types";
 import { Provider } from "react-redux";
 import store from "./store";
-import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
+import Navbar from "./components/layout/Navbar";
+import Landing from "./components/layout/Landing";
+import Routes from "./components/routing/Routes";
 const App = () => {
   useEffect(() => {
     if (localStorage.token) {
@@ -16,11 +19,15 @@ const App = () => {
   }, []);
   return (
     <Provider store={store}>
-      <div className="app">
-        <div className="test">
-          <p>TEST</p>
-        </div>
-      </div>
+      <Router>
+        <Fragment>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            <Route component={Routes} />
+          </Switch>
+        </Fragment>
+      </Router>
     </Provider>
   );
 };
