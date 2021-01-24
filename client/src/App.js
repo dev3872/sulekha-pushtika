@@ -15,11 +15,13 @@ const App = () => {
     });
   }, []);
   return (
-    <div className="app">
-      <div className="test">
-        <p>TEST</p>
+    <Provider store={store}>
+      <div className="app">
+        <div className="test">
+          <p>TEST</p>
+        </div>
       </div>
-    </div>
+    </Provider>
   );
 };
 
