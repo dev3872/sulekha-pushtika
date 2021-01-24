@@ -1,0 +1,10 @@
+$primary-color: #f8c2c2;
+$secondary-color: #742870;
+$tertiary-color: #ffffff;
+$font-family-hindi: "Noto Sans", sans-serif;
+$font-family-english: "Open Sans", sans-serif;
+body {
+  margin: 0;
+  background: $primary-color;
+  font: $font-family-english;
+}
